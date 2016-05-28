@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="jxust.com.view2.MainActivity">
+
+    <jxust.com.view2.CustomImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        custom:image="@mipmap/ic_launcher"
+        custom:imageScaleType="center"
+        custom:titleText="Hello World!"
+        custom:titleTextColor="#ff0000"
+        custom:titleTextSize="30sp" />
+
+    <jxust.com.view2.CustomImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        custom:image="@mipmap/ic_launcher"
+        custom:imageScaleType="center"
+        custom:titleText="helloworldwelcome"
+        custom:titleTextColor="#00ff00"
+        custom:titleTextSize="20sp" />
+
+    <jxust.com.view2.CustomImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        custom:image="@drawable/lmj"
+        custom:imageScaleType="center"
+        custom:titleText="妹子~"
+        custom:titleTextColor="#ff0000"
+        custom:titleTextSize="12sp" />
+</LinearLayout>

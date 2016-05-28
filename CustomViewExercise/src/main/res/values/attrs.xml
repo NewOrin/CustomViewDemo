@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="radius" format="dimension" />
+    <attr name="circleColor" format="color" />
+    <attr name="circleWidth" format="dimension"/>
+    <attr name="numSize" format="dimension" />
+    <attr name="numColor" format="color" />
+    <attr name="scaleSize" format="dimension" />
+    <attr name="scaleColor" format="color" />
+    <!--时钟自定义属性-->
+    <declare-styleable name="ClockView">
+        <attr name="radius" />
+        <attr name="circleColor" />
+        <attr name="circleWidth"/>
+        <attr name="numSize" />
+        <attr name="numColor" />
+        <attr name="scaleSize" />
+        <attr name="scaleColor" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,28 @@
+自定义View的步骤:
+    一,自定义View的属性
+    二,在View的构造方法中获得我们自定义的属性
+    [ 三,重写onMesure ]
+    四,重写onDraw
+把3用[]标出了，所以说3不一定是必须的，当然了大部分情况下还是需要重写的.
+
+    一:
+        1,自定义View的属性，首先在res/values/  下建立一个attrs.xml ， 在里面定义我们的属性和声明我们的整个样式。
+        2,然后在布局中声明我们的自定义View
+        3,一定要引入 xmlns:custom="http://schemas.android.com/apk/res/com.example.customview01"我们的命名空间，
+          后面的包路径指的是项目的package
+
+    二:
+        1,在View的构造方法中，获得我们的自定义的样式
+        2,重写了3个构造方法，默认的布局文件调用的是两个参数的构造方法，
+          所以记得让所有的构造调用我们的三个参数的构造，
+          我们在三个参数的构造中获得自定义属性.
+
+    三:
+        1,我们重写onDraw，onMesure调用系统提供的
+        2,系统帮我们测量的高度和宽度都是MATCH_PARNET，当我们设置明确的宽度和高度时，系统帮我们测量的结果就是我们设置的结果，
+          当我们设置为WRAP_CONTENT,或者MATCH_PARENT系统帮我们测量的结果就是MATCH_PARENT的长度。
+          所以，当设置了WRAP_CONTENT时，我们需要自己进行测量，即重写onMesure方法”：
+          重写之前先了解MeasureSpec的specMode,一共三种类型：
+          EXACTLY：一般是设置了明确的值或者是MATCH_PARENT
+          AT_MOST：表示子布局限制在一个最大值内，一般为WARP_CONTENT
+          UNSPECIFIED：表示子布局想要多大就多大，很少使用
